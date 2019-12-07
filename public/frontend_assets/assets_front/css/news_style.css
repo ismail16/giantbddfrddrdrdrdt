@@ -1,0 +1,46 @@
+/*! CSS Used from: file:///home/siam/Desktop/www.viyellatexgroup.com_files/style.css ; media=all */
+@media all{
+figure,section{display:block;}
+body{padding:0;margin:0;font-size:14px;font-family:'Sofia Pro',Helvetica Neue,Helvetica,Arial,sans-serif;font-weight:300;line-height:18px;color:#111;width:100%;height:100%;}
+::-moz-selection{background:#333333;color:#fff;}
+::selection{background:#333333;color:#fff;}
+a{color:#333;outline:0;transition:all 0.1s linear 0s, letter-spacing 0s linear 0s;-webkit-transition:all 0.1s linear 0s, letter-spacing 0s linear 0s;}
+a:focus{outline:none;}
+a:hover,a:active{outline:none;text-decoration:none;}
+a:hover,a:focus{text-decoration:none;background:none;}
+b,strong{font-weight:500;}
+p{margin:0 0 10px;}
+ul{margin:1em 0;}
+ul{padding:0 0 0 40px;}
+li{list-style:none outside none;}
+img{border:0 none;}
+*{box-sizing:border-box;}
+.container{width:1600px;max-width:96%;margin:0 auto;}
+.home-news .heading{margin:25px 0;}
+.home-news .news-box{width:100%;height:310px;}
+.event .media{margin-bottom:30px;}
+.event .media-heading{color:#505455;font-size:15px;font-weight:500;line-height:normal;    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.event .nav-justified{margin-bottom:20px;margin-top:0;}
+.event .nav-justified li a{color:#112244;text-transform:uppercase;letter-spacing:0.25px;background:#F8F7F3;-moz-transition:all 0.3s linear;-ms-transition:all 0.3s linear;-o-transition:all 0.3s linear;-webkit-transition:all 0.3s linear;transition:all 0.3s linear;white-space:nowrap;}
+.event .nav-justified li.active a,.event .nav-justified li a:hover{background:#2F2F31;color:#fff;}
+.event p{color:#666;font-size:14px;font-weight:300;letter-spacing:0.25px;line-height:22px;margin-bottom:0;}
+.event-date{text-align:center;width:64px;height:64px;color:#2F2F31;background:#F0F1F5;text-transform:uppercase;font-size:12.5px;}
+.event-date strong{display:block;font-size:18px;padding-top:10px;}
+.event-date strong::after{background:#2F2F31 none repeat scroll 0 0;content:"";display:block;height:1px;margin:5px auto;width:28px;}
+.view-all{background:#fff none repeat scroll 0 0;border:2px solid #112244;color:#112244;display:inline-block;font-size:13px;font-weight:700;letter-spacing:0.25px;padding:15px;text-align:center;text-transform:uppercase;}
+.view-all:hover{background:#8E9293 none repeat scroll 0 0;border:2px solid #8E9293;color:#fff;}
+.heading{color:#354045;font-size:24px;font-weight:600;letter-spacing:0.5px;line-height:normal;margin:0;text-transform:uppercase;}
+.news-box{background:rgba(255, 255, 255, 0.6) none repeat scroll 0 0;display:inline-block;height:auto;margin-bottom:15px;padding:30px;width:100%;}
+.news-box{padding:0;display:block;position:relative;margin-bottom:30px;overflow:hidden;}
+.news-content{background:rgba(0, 0, 0, 0.4) none repeat scroll 0 0;bottom:0;height:45%;left:0;width:100%;padding:20px;position:absolute;z-index:99;transition:all 0.3s linear;}
+.news-box:hover .news-content{background:rgba(0, 0, 0, 0.6) none repeat scroll 0 0;height:60%;}
+.news-box .img-responsive{width:100%;}
+.news-content h2{margin:0;}
+.news-content h2 a{color:#fff;font-size:18px;font-weight:400;letter-spacing:0.25px;line-height:normal;}
+.news-box:hover h2 a{color:#98b33c;}
+.news-content span{color:#fff;font-size:15px;font-weight:300;letter-spacing:0.5px;margin:15px 0 5px;}
+}

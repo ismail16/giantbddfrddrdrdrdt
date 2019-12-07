@@ -1,0 +1,424 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <script src="./triangle.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-param" content="_csrf-frontend">
+    <meta name="csrf-token" content="eW12OWFsTWQBLkYPVB1gHk4iBQECWyhUFhhPCDsfeAILVTRYIF0uHQ==">
+    <meta name="msapplication-config" content="./themes/real_estate/assets/images/static/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    
+    <title>Dynamic Site</title>
+    <link rel="stylesheet" id="MyStyle-css" href="./themes/real_estate/assets/css/news_bootstrap.min.css" type="text/css" media="all">
+    <link rel="stylesheet" id="MyStyle1-css" href="./themes/real_estate/assets/css/news_style.css" type="text/css" media="all">
+    <link rel="stylesheet" id="MyStyle2-css" href="./themes/real_estate/assets/css/font.css" type="text/css" media="all">
+    <link rel="apple-touch-icon" sizes="60x60" href="./themes/real_estate/assets/images/static/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./themes/real_estate/assets/images/static/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./themes/real_estate/assets/images/static/favicon-16x16.png">
+    <link rel="manifest" href="./themes/real_estate/assets/images/static/manifest.json">
+    <link rel="mask-icon" href="./themes/real_estate/assets/images/static/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="./themes/real_estate/assets/images/static/favicon.ico">
+    <link href="./themes/real_estate/assets/css/home.bundle.min.css" rel="stylesheet" media="all">
+    <link href="./themes/real_estate/assets/css/style.min.css" rel="stylesheet" media="all">
+    <link href="./themes/real_estate/assets/css/circle.css" rel="stylesheet" media="all">
+    <script src="./themes/real_estate/assets/js/jquery_modernizr.bundle.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDcFWRXxx-r-FKDO587EmqLQw6kq2pTXCE"></script>
+    <style>
+        /* The Overlay (background) */
+
+        #video-player-overlay {
+            /* Height & width depends on how you want to reveal the overlay (see JS below) */
+            height: 100%;
+            width: 100%;
+            position: fixed;
+            display: none;
+            /* Stay in place */
+            /* Sit on top */
+            left: 0;
+            top: 0;
+            background-color: rgb(0, 0, 0);
+            /* Black fallback color */
+            background-color: rgba(0, 0, 0, 0.9);
+            /* Black w/opacity */
+            overflow-x: hidden;
+            /* Disable horizontal scroll */
+            transition: 0.5s;
+            z-index: 9999;
+            /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+        }
+
+        /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+
+        @media screen and (max-height: 450px) {
+            #video-player-overlay a {
+                font-size: 20px
+            }
+            #video-player-overlay .closebtn {
+                font-size: 40px;
+                top: 15px;
+                right: 35px;
+            }
+        }
+    </style>
+</head>
+<body>
+	<script type="text/javascript">
+	   var site_url_info = {
+	       baseUrl: 'http://innstarbd.com',
+	       themeUrl: 'http://innstarbd.com/themes/real_estate'
+	   }               
+	</script>
+	
+	<div class="site-main-wrapper">
+	    <div class="loader ">
+	        <div class="custom-progress"></div>
+	        <div class="loader-logo">
+	            <h2 class="heading-secondary">
+	                <span>
+	                    <span>Giant woke up.</span>
+	                </span>
+	            </h2>
+	        </div>
+	    </div>
+	    <header class="">
+	        <!-- Page -->
+	        <div class="page page_loading" id="root">
+	            <!-- UI -->
+	            <div class="mobile-menu-bar"></div>
+	            <a class="ui-logo " href="index.html"></a>
+	            <span class="ui-menu">
+	                <!--<img src="images/static/icons/hamburger-normal.png" alt="">-->
+	                <span class="ui-menu__bar"></span>
+	                <span class="ui-menu__bar"></span>
+	                <span class="ui-menu__bar"></span>
+	            </span>
+
+	            <nav class="menu">
+
+	                <i class="menu__close">
+	                    <img src="themes/real_estate/assets/images/static/icons/hamburger-close.png" alt="">
+	                </i>
+	                <div class="menu-inner-wrapper">
+	                    <span class="menu-svg-animation-holder">
+                            <svg id="home-giant" version="1.1" class="svg-animation" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <image x="0" y="0" width="236" height="123" xlink:href="themes/real_estate/assets/images/static/icons/giant/home-giant.png"
+                                />
+                            </svg>
+
+                            <svg id="map-bangladesh-giant" version="1.1" class="svg-animation" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <image x="0" y="0" width="236" height="123" xlink:href="themes/real_estate/assets/images/static/icons/giant/map-bangladesh-giant.png"
+                                />
+                            </svg>
+
+
+                            <svg id="our-concerns" version="1.1" class="svg-animation" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <image x="0" y="0" width="236" height="123" xlink:href="themes/real_estate/assets/images/static/icons/giant/our-concerns.png"
+                                />
+                            </svg>
+
+                            <svg id="profile-giant-final" version="1.1" class="svg-animation" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <image x="0" y="0" width="236" height="123" xlink:href="themes/real_estate/assets/images/static/icons/giant/profile-giant-final.png"
+                                />
+                            </svg>
+
+                            <svg id="sustainability-icon" version="1.1" class="svg-animation" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <image x="0" y="0" width="236" height="123" xlink:href="themes/real_estate/assets/images/static/icons/giant/sustainability-icon.png"
+                                />
+                            </svg>
+
+                            <svg id="take-a-tour-giant" version="1.1" class="svg-animation" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <image x="0" y="0" width="236" height="123" xlink:href="themes/real_estate/assets/images/static/icons/giant/take-a-tour-giant.png"
+                                />
+                            </svg>
+                        </span>
+		                <menu class="menu__content">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <a data-target="home-giant" class="menu__item active main-menu-item" href="index.html">Home</a>
+                                    <a data-target="profile-giant-final" class="menu__item main-menu-item" href="#">Profile</a>
+                                    <a data-target="sustainability-icon" class="menu__item main-menu-item" href="#">Sustainability Strategy</a>
+                                    <a data-target="take-a-tour-giant" class="menu__item main-menu-item" href="#">Take a tour</a>
+                                    <a data-target="our-concerns" class="menu__item main-menu-item" href="#">Our Concerns</a>
+                                    <a data-target="map-bangladesh-giant" class="menu__item main-menu-item" href="#">Our pride Bangladesh</a>
+                                </div>
+                                <div class="col-md-6" id="sub-menu">
+                                </div>
+                            </div>
+                        </menu>
+	            	</div>
+	        	</nav>
+	    	</div>
+		</header>
+
+		<!--<img src="-->
+		<div class="hero-banner-no-slider" style="background-image: url('admin/uploads/page/mission1/1506143169xAfPG.jpg');">
+		    <div class="ui-help">
+		        <img src="themes/real_estate/assets/images/static/icons/arrow-right-large-pink.png" alt="" class="ui-down-arrow">
+		    </div>
+		</div>
+
+		<!--start changing section -->
+
+            <style type="text/css">
+                .gallery {
+                    -webkit-column-count: 3;
+                    -moz-column-count: 3;
+                    column-count: 3;
+                    -webkit-column-width: 33%;
+                    -moz-column-width: 33%;
+                    column-width: 33%; }
+                .gallery .pics {
+                    -webkit-transition: all 350ms ease;
+                    transition: all 350ms ease; }
+                .gallery .animation {
+                    -webkit-transform: scale(1);
+                    -ms-transform: scale(1);
+                    transform: scale(1); }
+
+                @media (max-width: 450px) {
+                    .gallery {
+                        -webkit-column-count: 1;
+                        -moz-column-count: 1;
+                        column-count: 1;
+                        -webkit-column-width: 100%;
+                        -moz-column-width: 100%;
+                        column-width: 100%;
+                    }
+                }
+
+                @media (max-width: 400px) {
+                    .btn.filter {
+                        padding-left: 1.1rem;
+                        padding-right: 1.1rem;
+                    }
+                }
+                .animation{
+                    margin: 3px;
+                }
+            </style>
+
+            <div class="row">
+
+                <!-- Grid column -->
+                <center>
+                    <div style="margin: 20px 0px 15px 0px;" class="col-md-12 d-flex justify-content-center mb-5">
+                        <button type="button" class="btn btn-outline-black waves-effect filter" data-rel="all">All</button>
+                        <button type="button" class="btn btn-outline-black waves-effect filter" data-rel="1">Mountains</button>
+                        <button type="button" class="btn btn-outline-black waves-effect filter" data-rel="2">Sea</button>
+
+                    </div>
+                </center>
+                
+                <!-- Grid column -->
+
+            </div>
+
+            <div style="margin: 35px;" class="gallery" id="gallery">
+
+                <!-- Grid column -->
+                <div class="mb-3 pics animation all 2">
+                    <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(73).jpg" alt="Card image cap">
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="mb-3 pics animation all 1">
+                    <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Vertical/mountain1.jpg" alt="Card image cap">
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="mb-3 pics animation all 1">
+                    <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Vertical/mountain2.jpg" alt="Card image cap">
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="mb-3 pics animation all 2">
+                    <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(35).jpg" alt="Card image cap">
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="mb-3 pics animation all 2">
+                    <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg" alt="Card image cap">
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="mb-3 pics animation all 1">
+                    <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Vertical/mountain3.jpg" alt="Card image cap">
+                </div>
+                <!-- Grid column -->
+
+            </div>
+
+            <script type="text/javascript">
+                $(function() {
+                    var selectedClass = "";
+                    $(".filter").click(function(){
+                        selectedClass = $(this).attr("data-rel");
+                        $("#gallery").fadeTo(100, 0.1);
+                        $("#gallery div").not("."+selectedClass).fadeOut().removeClass('animation');
+                        setTimeout(function() {
+                            $("."+selectedClass).fadeIn().addClass('animation');
+                            $("#gallery").fadeTo(300, 1);
+                        }, 300);
+                    });
+                });
+            </script>
+
+        <!--start changing section -->
+
+		<footer class="site-main-footer bg-color-3">
+		    <div class="container">
+		        <div class="row footer-top-big-padding">
+		            <div class="child-stagger-up" data-scrollmagic data-from="30px">
+		                <div class="row mb-80 text-center">
+		                    <ul class="social-list list-inline">
+		                        <li>
+		                            <a href="#" target="_blank">Find Us</a>
+		                        </li>
+		                        <li>
+		                            <a href="#" target="_blank">Join Us</a>
+		                        </li>
+		                        <li>
+		                            <a href="#" target="_blank">The Newsline</a>
+		                        </li>
+		                        <!-- <li>
+		                        <a href="#" target="_blank">Connect/Reach out</a>
+		                    </li> -->
+		                        <li>
+		                            <a href="#" target="_blank">Newsletter</a>
+		                        </li>
+		                    </ul>
+		                </div>
+		            </div>
+		        </div>
+		    </div>
+		</footer>
+	</div>
+
+	<script src="./themes/real_estate/assets/js/home.bundle.js"></script>
+        <script src="./themes/real_estate/assets/js/script.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                  $(".video_div_area").hover(function () {
+                      $(this).children("video")[0].play();
+                  }, function () {
+                      var el = $(this).children("video")[0];
+                      el.pause();
+                      el.currentTime = 0;
+                  });
+            });
+        </script>
+        <script type="text/javascript">
+            jQuery(document).ready(function () {
+                $(".main-menu-item").hover(function () {
+                    var menu = {
+                        "home": [
+                          {name: "", link: ''}
+                        ],
+                        "profile": [
+                          {name: 'Our Leaders', link: 'our_leaders.html'},
+                          {name: 'Our Story (Circtificates)', link: 'our_story.html'},
+                          {name: 'Our Belief', link: 'our_belief.html'},
+                          {name: 'Our Capacity', link: 'our_capacity.html'},
+                          {name: 'Our Success Story', link: 'our_success_story.html'}
+                        ],
+                        "sustainability_strategy": [
+                          {name: 'Giving back to the society/people', link: 'bact_to_society.html'},
+                          {name: 'Caring for the environment', link: 'environment.html'}
+                        ],
+                        "take_a_tour": [
+                          {name: 'Giant Textile Unit', link: 'textile_unit.html'},
+                          {name: 'Joydebpur Unit', link: 'joydebpur_unit.html'},
+                          {name: 'Research and Development', link: 'research_dev.html'},
+                          {name: 'Products/Creations', link: 'products.html'},
+                          {name: 'Partners', link: 'partners.html'}
+                        ],
+                        "our_concerns": [
+                          {name: 'GBT', link: 'gbt.html'},
+                          {name: 'Giant Agro', link: 'giant_agro.html'}
+                        ],
+                        "our_pride_bangladesh": [
+                          {name: "", link: ''}
+                        ],
+                    }
+                    var item_selected = $(this).html().replace(/\s+/g, '_').toLowerCase();
+                    var sub_menu_items = eval("menu." + item_selected);
+                    var text = "";
+                    for (i = 0; i < sub_menu_items.length; i++) {
+                      text += '<a data-target="home" class="menu__item sub-menu-item" href="'+sub_menu_items[i].link+'">' + sub_menu_items[i].name +'</a>';
+                    }
+
+                    var margin_top = (parseInt(sub_menu_items[0]) * 42) + 'px';
+                    text = '<h1 style = "margin-top: ' + margin_top + ';"></h1>' + text;
+                    $("#sub-menu").html(text);
+                });
+
+                $(document).delegate('.dynamic_submit_btn', 'click', function (event, jqXHR, settings) {
+                    var form = $(this).closest('form');
+                    var form_id = form.attr('id');
+
+                    if (form.find('.has-error').length) {
+                        return false;
+                    }
+
+                    $.ajax({
+                        url: form.attr('action'),
+                        type: 'post',
+                        data: form.serialize(),
+                        beforeSend: function (request) {
+                            $('.success_wrapper_' + form_id).addClass('hide');
+                            $('.error_wrapper_' + form_id).addClass('hide');
+                        },
+
+                        success: function (data) {
+                            if (data.result == 'success') {
+                                form[0].reset();
+                                $('.success_wrapper_' + form_id).removeClass('hide');
+                                $('.error_wrapper_' + form_id).addClass('hide');
+                                $('.success_container_' + form_id).html(data.msg);
+                                $('.error_container_' + form_id).html('');
+
+                                // setTimeout(function() {
+
+                                //   $('.success_wrapper_'+form_id).addClass('hide');
+
+                                // }, 8000);
+
+                            } else {
+                                $('.error_container_' + form_id).html(data.msg);
+                                $('.success_container_' + form_id).html('');
+                                $('.success_wrapper_' + form_id).addClass('hide');
+                                $('.error_wrapper_' + form_id).removeClass('hide');
+                                // setTimeout(function() {
+
+                                //   $('.error_wrapper_'+form_id).addClass('hide');
+
+                                // }, 15000);
+                            }
+                        }
+                    });
+                    return false;
+                });
+            });
+        </script>
+
+        <script>
+            function openNav(element) {
+                document.getElementById("circle-video-frame").src = element.getAttribute('data-video-src');
+                document.getElementById("video-player-overlay").style.display = "block";
+            }
+
+            function closeNav() {
+                document.getElementById("video-player-overlay").style.display = "none";
+                document.getElementById("circle-video-frame").src = "";
+
+            }
+        </script>
+</body>
+</html>

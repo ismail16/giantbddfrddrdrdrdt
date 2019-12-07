@@ -14,9 +14,11 @@ yarn-error.log
 .idea/
 .idea/vcs.xml
 .idea/workspace.xml
-/public/volume/
+
 /mnb-new/public/images/profile/
-/public/frontend_assets/image/
-/public/img/
-/public/images/
-/public/payagreementpaper/
+/public/frontend_assets/assets_front/images
+/public/frontend_assets/assets_front/video
+/public/frontend_assets/cv
+/public/frontend_assets/images
+/public/frontend_assets/Videos
+

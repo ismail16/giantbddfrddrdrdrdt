@@ -1,0 +1,446 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <script src="./triangle.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-param" content="_csrf-frontend">
+    <meta name="csrf-token" content="eW12OWFsTWQBLkYPVB1gHk4iBQECWyhUFhhPCDsfeAILVTRYIF0uHQ==">
+    <meta name="msapplication-config" content="./themes/real_estate/assets/images/static/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    
+    <title>Dynamic Site</title>
+    <link rel="stylesheet" id="MyStyle-css" href="./themes/real_estate/assets/css/news_bootstrap.min.css" type="text/css" media="all">
+    <link rel="stylesheet" id="MyStyle1-css" href="./themes/real_estate/assets/css/news_style.css" type="text/css" media="all">
+    <link rel="stylesheet" id="MyStyle2-css" href="./themes/real_estate/assets/css/font.css" type="text/css" media="all">
+    <link rel="apple-touch-icon" sizes="60x60" href="./themes/real_estate/assets/images/static/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./themes/real_estate/assets/images/static/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./themes/real_estate/assets/images/static/favicon-16x16.png">
+    <link rel="manifest" href="./themes/real_estate/assets/images/static/manifest.json">
+    <link rel="mask-icon" href="./themes/real_estate/assets/images/static/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="./themes/real_estate/assets/images/static/favicon.ico">
+    <link href="./themes/real_estate/assets/css/home.bundle.min.css" rel="stylesheet" media="all">
+    <link href="./themes/real_estate/assets/css/style.min.css" rel="stylesheet" media="all">
+    <link href="./themes/real_estate/assets/css/circle.css" rel="stylesheet" media="all">
+    <script src="./themes/real_estate/assets/js/jquery_modernizr.bundle.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDcFWRXxx-r-FKDO587EmqLQw6kq2pTXCE"></script>
+    <style>
+        /* The Overlay (background) */
+
+        #video-player-overlay {
+            /* Height & width depends on how you want to reveal the overlay (see JS below) */
+            height: 100%;
+            width: 100%;
+            position: fixed;
+            display: none;
+            /* Stay in place */
+            /* Sit on top */
+            left: 0;
+            top: 0;
+            background-color: rgb(0, 0, 0);
+            /* Black fallback color */
+            background-color: rgba(0, 0, 0, 0.9);
+            /* Black w/opacity */
+            overflow-x: hidden;
+            /* Disable horizontal scroll */
+            transition: 0.5s;
+            z-index: 9999;
+            /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+        }
+
+        /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+
+        @media screen and (max-height: 450px) {
+            #video-player-overlay a {
+                font-size: 20px
+            }
+            #video-player-overlay .closebtn {
+                font-size: 40px;
+                top: 15px;
+                right: 35px;
+            }
+        }
+    </style>
+</head>
+<body>
+	<script type="text/javascript">
+	   var site_url_info = {
+	       baseUrl: 'http://innstarbd.com',
+	       themeUrl: 'http://innstarbd.com/themes/real_estate'
+	   }               
+	</script>
+	
+	<div class="site-main-wrapper">
+	    <div class="loader ">
+	        <div class="custom-progress"></div>
+	        <div class="loader-logo">
+	            <h2 class="heading-secondary">
+	                <span>
+	                    <span>Giant woke up.</span>
+	                </span>
+	            </h2>
+	        </div>
+	    </div>
+	    <header class="">
+	        <!-- Page -->
+	        <div class="page page_loading" id="root">
+	            <!-- UI -->
+	            <div class="mobile-menu-bar"></div>
+	            <a class="ui-logo " href="index.html"></a>
+	            <span class="ui-menu">
+	                <!--<img src="images/static/icons/hamburger-normal.png" alt="">-->
+	                <span class="ui-menu__bar"></span>
+	                <span class="ui-menu__bar"></span>
+	                <span class="ui-menu__bar"></span>
+	            </span>
+
+	            <nav class="menu">
+
+	                <i class="menu__close">
+	                    <img src="themes/real_estate/assets/images/static/icons/hamburger-close.png" alt="">
+	                </i>
+	                <div class="menu-inner-wrapper">
+	                    <span class="menu-svg-animation-holder">
+                            <svg id="home-giant" version="1.1" class="svg-animation" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <image x="0" y="0" width="236" height="123" xlink:href="themes/real_estate/assets/images/static/icons/giant/home-giant.png"
+                                />
+                            </svg>
+
+                            <svg id="map-bangladesh-giant" version="1.1" class="svg-animation" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <image x="0" y="0" width="236" height="123" xlink:href="themes/real_estate/assets/images/static/icons/giant/map-bangladesh-giant.png"
+                                />
+                            </svg>
+
+
+                            <svg id="our-concerns" version="1.1" class="svg-animation" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <image x="0" y="0" width="236" height="123" xlink:href="themes/real_estate/assets/images/static/icons/giant/our-concerns.png"
+                                />
+                            </svg>
+
+                            <svg id="profile-giant-final" version="1.1" class="svg-animation" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <image x="0" y="0" width="236" height="123" xlink:href="themes/real_estate/assets/images/static/icons/giant/profile-giant-final.png"
+                                />
+                            </svg>
+
+                            <svg id="sustainability-icon" version="1.1" class="svg-animation" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <image x="0" y="0" width="236" height="123" xlink:href="themes/real_estate/assets/images/static/icons/giant/sustainability-icon.png"
+                                />
+                            </svg>
+
+                            <svg id="take-a-tour-giant" version="1.1" class="svg-animation" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <image x="0" y="0" width="236" height="123" xlink:href="themes/real_estate/assets/images/static/icons/giant/take-a-tour-giant.png"
+                                />
+                            </svg>
+                        </span>
+		                <menu class="menu__content">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <a data-target="home-giant" class="menu__item active main-menu-item" href="index.html">Home</a>
+                                    <a data-target="profile-giant-final" class="menu__item main-menu-item" href="#">Profile</a>
+                                    <a data-target="sustainability-icon" class="menu__item main-menu-item" href="#">Sustainability Strategy</a>
+                                    <a data-target="take-a-tour-giant" class="menu__item main-menu-item" href="#">Take a tour</a>
+                                    <a data-target="our-concerns" class="menu__item main-menu-item" href="#">Our Concerns</a>
+                                    <a data-target="map-bangladesh-giant" class="menu__item main-menu-item" href="#">Our pride Bangladesh</a>
+                                </div>
+                                <div class="col-md-6" id="sub-menu">
+                                </div>
+                            </div>
+                        </menu>
+	            	</div>
+	        	</nav>
+	    	</div>
+		</header>
+
+		<!--<img src="-->
+		<div class="hero-banner-no-slider" style="background-image: url('admin/uploads/page/mission1/1506143169xAfPG.jpg');">
+		    <div class="ui-help">
+		        <img src="themes/real_estate/assets/images/static/icons/arrow-right-large-pink.png" alt="" class="ui-down-arrow">
+		    </div>
+		</div>
+
+		<!--start changing section -->
+
+		<div class="container relative">
+		    <div class="row">
+                <div class="giant_page">
+                    <div class="giant_page_header text_uppercase">
+                        <h2 class="heading-secondary mb-60 text_off_white">Ceo </h2>
+                    </div>
+                    <div class="col-sm-5 col-md-5 pt-120 pb-80">
+                        <div class="image-box-holder">
+                            <div class="image-box full_width_img">
+                                <img src="themes/real_estate/assets/images/static/ceo.jpg">
+                            </div>
+                        </div>
+    		        </div>
+    				
+    				<div class="col-sm-7 col-md-7 pt-120 pb-80">
+    				    <div data-scrollmagic class="child-stagger-up mt-20">
+                            <div class="mb-30">
+                                <h3 class="board-member-title text_uppercase">Jeremy Beadle</h3>
+                                <h4 class="board-member-desig text_uppercase">CHIEF EXECUTIVE OFFICER</h4>
+                            </div>
+                            <div class="line line--full border_1 line_grey mb-20"></div>
+                            <p>Sometimes, a person just needs to feel like they’re spending intimate, personal time with another human being.
+                            <br/>
+                            <br/>
+                            That’s what makes free webcam girl sites different from pornography. They add that personal touch that makes the viewer truly feel connected to them. 
+                            <br/>
+                            <br/>
+                            For a person who is struggling to connect with members of the opposite sex in real life, this can be a great way to get that fix of intimacy.
+
+                            live cam girl sites aren’t the only way to get close to someone intimately online. Whenever you want something different from free webcam girl sites, there are tons of free chat rooms and online forums to explore where you can stay anonymous and chat with people who share the same interests.
+                            <br>
+                            <br>
+                            If your insecurity doesn’t necessarily stem from a lack of interaction, but more a lack of feeling attractive, there are other options that will help you online. Sometimes the best way to put your insecurities to rest can simply be to get an honest opinion. There are multiple support groups online where you can share a picture of yourself with other members and they will give honest feedback on your appearance.
+                        </p>
+                        </div>
+                    </div>
+                </div>
+			</div>
+		</div>
+        <div class="container relative">
+            <div class="row">
+                <div class="pt-80">
+                    <div class="giant_page_header text_uppercase">
+                        <h2 class="heading-secondary mb-60 text_off_white">Senior Management </h2>
+                    </div>
+                </div>
+                <div class="member_list">
+
+                    <div class="member-list-item custom-col-xs-6 col-sm-6 col-md-4">
+                        <div class="member-thumb-wrapper pb-60 mb-30">
+                            <img src="themes/real_estate/assets/images/static/m1.jpg" alt="">
+                        </div>
+                        <div class="member-info">
+                            <div class="top-info">
+                                <h3 class="board-member-title text-uppercase">Peter Dinklage</h3>
+                                <h4 class="board-member-desig text-uppercase">EXECUTIVE DIRECTOR</h4>
+                            </div>
+                            <div class="details-info">
+                                Mr. Md. Mujibur Rahman is a seasoned management professional with over 35 years of extensive experience in managing renowned local and multinational organizations.<br>
+                                <br>
+                                He has been a part of SHL since inception and is currently the Executive Director of Procurement and Legal.                 
+                            </div>
+                            <button class="member-details-expand">
+                                <span class="glyphicon glyphicon-plus"></span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="member-list-item custom-col-xs-6 col-sm-6 col-md-4">
+                        <div class="member-thumb-wrapper pb-60 mb-30">
+                            <img src="themes/real_estate/assets/images/static/m2.jpg" alt="">
+                        </div>
+                        <div class="member-info">
+                            <div class="top-info">
+                                <h3 class="board-member-title text-uppercase">Nikolaj Coster-Waldau</h3>
+                                <h4 class="board-member-desig text-uppercase">EXECUTIVE DIRECTOR</h4>
+                            </div>
+                            <div class="details-info">
+                                Mr. Md. Mujibur Rahman is a seasoned management professional with over 35 years of extensive experience in managing renowned local and multinational organizations.<br>
+                                <br>
+                                He has been a part of SHL since inception and is currently the Executive Director of Procurement and Legal.                 
+                            </div>
+                            <button class="member-details-expand">
+                                <span class="glyphicon glyphicon-plus"></span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="member-list-item custom-col-xs-6 col-sm-6 col-md-4">
+                        <div class="member-thumb-wrapper pb-60 mb-30">
+                            <img src="themes/real_estate/assets/images/static/m3.jpg" alt="">
+                        </div>
+                        <div class="member-info">
+                            <div class="top-info">
+                                <h3 class="board-member-title text-uppercase">Sophie Turner</h3>
+                                <h4 class="board-member-desig text-uppercase">EXECUTIVE DIRECTOR</h4>
+                            </div>
+                            <div class="details-info">
+                                Mr. Md. Mujibur Rahman is a seasoned management professional with over 35 years of extensive experience in managing renowned local and multinational organizations.<br>
+                                <br>
+                                He has been a part of SHL since inception and is currently the Executive Director of Procurement and Legal.                 
+                            </div>
+                            <button class="member-details-expand">
+                                <span class="glyphicon glyphicon-plus"></span>
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container relative top_footer">
+            <div class="row">
+                <div class="pt-80">
+                    <div class="giant_page_header text_uppercase">
+                        <h2 class="heading-secondary mb-60 text_off_white"> Our Team            </h2>
+                    </div>
+                </div>
+                <div class="member_list">
+                    <div class="col-md-12">
+                        <div class="full_width_img">
+                            <img src="themes/real_estate/assets/images/static/team1.jpg" alt="">
+                        </div>
+                        <p class="mt-60">The hidden sutra for successfully turning dreams into reality is our regular practice. One segment of our human force is deployed to bridge the extreme aspirations of our consumers, while the other segment actually builds the dreams.<br>
+                        <br>
+                        To achieve the ultimate mission of maximizing lifestyle and potential, Shanta Holdings gathers widely experienced professionals, trained both at home and abroad. We have more than 200 full-time employees, who represent a vast spectrum of development, management and construction disciplines. Well-balanced personnel from both business and technical backgrounds are continuously thriving to fulfil the mission of Shanta.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+		<!--start changing section -->
+
+		<footer class="site-main-footer bg-color-3">
+		    <div class="container">
+		        <div class="row footer-top-big-padding">
+		            <div class="child-stagger-up" data-scrollmagic data-from="30px">
+		                <div class="row mb-80 text-center">
+		                    <ul class="social-list list-inline">
+		                        <li>
+		                            <a href="#" target="_blank">Find Us</a>
+		                        </li>
+		                        <li>
+		                            <a href="#" target="_blank">Join Us</a>
+		                        </li>
+		                        <li>
+		                            <a href="#" target="_blank">The Newsline</a>
+		                        </li>
+		                        <!-- <li>
+		                        <a href="#" target="_blank">Connect/Reach out</a>
+		                    </li> -->
+		                        <li>
+		                            <a href="#" target="_blank">Newsletter</a>
+		                        </li>
+		                    </ul>
+		                </div>
+		            </div>
+		        </div>
+		    </div>
+		</footer>
+	</div>
+
+	<script src="./themes/real_estate/assets/js/home.bundle.js"></script>
+        <script src="./themes/real_estate/assets/js/script.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                  $(".video_div_area").hover(function () {
+                      $(this).children("video")[0].play();
+                  }, function () {
+                      var el = $(this).children("video")[0];
+                      el.pause();
+                      el.currentTime = 0;
+                  });
+            });
+        </script>
+        <script type="text/javascript">
+            jQuery(document).ready(function () {
+                $(".main-menu-item").hover(function () {
+                    var menu = {
+                        "home": [
+                          {name: "", link: ''}
+                        ],
+                        "profile": [
+                          {name: 'Our Leaders', link: 'our_leaders.html'},
+                          {name: 'Our Story (Circtificates)', link: 'our_story.html'},
+                          {name: 'Our Belief', link: 'our_belief.html'},
+                          {name: 'Our Capacity', link: 'our_capacity.html'},
+                          {name: 'Our Success Story', link: 'our_success_story.html'}
+                        ],
+                        "sustainability_strategy": [
+                          {name: 'Giving back to the society/people', link: 'bact_to_society.html'},
+                          {name: 'Caring for the environment', link: 'environment.html'}
+                        ],
+                        "take_a_tour": [
+                          {name: 'Giant Textile Unit', link: 'textile_unit.html'},
+                          {name: 'Joydebpur Unit', link: 'joydebpur_unit.html'},
+                          {name: 'Research and Development', link: 'research_dev.html'},
+                          {name: 'Products/Creations', link: 'products.html'},
+                          {name: 'Partners', link: 'partners.html'}
+                        ],
+                        "our_concerns": [
+                          {name: 'GBT', link: 'gbt.html'},
+                          {name: 'Giant Agro', link: 'giant_agro.html'}
+                        ],
+                        "our_pride_bangladesh": [
+                          {name: "", link: ''}
+                        ],
+                    }
+                    var item_selected = $(this).html().replace(/\s+/g, '_').toLowerCase();
+                    var sub_menu_items = eval("menu." + item_selected);
+                    var text = "";
+                    for (i = 0; i < sub_menu_items.length; i++) {
+                      text += '<a data-target="home" class="menu__item sub-menu-item" href="'+sub_menu_items[i].link+'">' + sub_menu_items[i].name +'</a>';
+                    }
+
+                    var margin_top = (parseInt(sub_menu_items[0]) * 42) + 'px';
+                    text = '<h1 style = "margin-top: ' + margin_top + ';"></h1>' + text;
+                    $("#sub-menu").html(text);
+                });
+
+                $(document).delegate('.dynamic_submit_btn', 'click', function (event, jqXHR, settings) {
+                    var form = $(this).closest('form');
+                    var form_id = form.attr('id');
+
+                    if (form.find('.has-error').length) {
+                        return false;
+                    }
+
+                    $.ajax({
+                        url: form.attr('action'),
+                        type: 'post',
+                        data: form.serialize(),
+                        beforeSend: function (request) {
+                            $('.success_wrapper_' + form_id).addClass('hide');
+                            $('.error_wrapper_' + form_id).addClass('hide');
+                        },
+
+                        success: function (data) {
+                            if (data.result == 'success') {
+                                form[0].reset();
+                                $('.success_wrapper_' + form_id).removeClass('hide');
+                                $('.error_wrapper_' + form_id).addClass('hide');
+                                $('.success_container_' + form_id).html(data.msg);
+                                $('.error_container_' + form_id).html('');
+
+                                // setTimeout(function() {
+
+                                //   $('.success_wrapper_'+form_id).addClass('hide');
+
+                                // }, 8000);
+
+                            } else {
+                                $('.error_container_' + form_id).html(data.msg);
+                                $('.success_container_' + form_id).html('');
+                                $('.success_wrapper_' + form_id).addClass('hide');
+                                $('.error_wrapper_' + form_id).removeClass('hide');
+                                // setTimeout(function() {
+
+                                //   $('.error_wrapper_'+form_id).addClass('hide');
+
+                                // }, 15000);
+                            }
+                        }
+                    });
+                    return false;
+                });
+            });
+        </script>
+
+        <script>
+            function openNav(element) {
+                document.getElementById("circle-video-frame").src = element.getAttribute('data-video-src');
+                document.getElementById("video-player-overlay").style.display = "block";
+            }
+
+            function closeNav() {
+                document.getElementById("video-player-overlay").style.display = "none";
+                document.getElementById("circle-video-frame").src = "";
+
+            }
+        </script>
+</body>
+</html>

@@ -1,0 +1,311 @@
+.join_us_global_movement{
+	padding: 80px 65px 0px 65px;
+}
+.join_us_we_love_our_people{
+	padding-left: 10px;
+}
+.join_us_we_love_our_people p{
+	padding: 20px 50px 50px 50px;
+}
+.sustainable_stratgy_1{
+	color: #ddd;
+	background-color:#fff;
+	text-align:center;
+	padding:50px 80px;
+	text-align: justify;
+}
+
+.featured-news .thumbnail {
+	height: 125px !important;
+}
+
+.featured-jobs .thumbnail .feature-link {
+    color: #77c7dc;
+    display: -webkit-box;
+    overflow: hidden;
+    line-height: normal;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.featured-news .thumbnail .feature-link h3{
+	padding-left: 0px !important;
+}
+
+@media screen and (max-width: 480px){
+	.side-content {
+	    padding-left: 14px !important;
+	}
+	.counter-title {
+	    font-size: 36px;
+	    color: rgb(0, 0, 0);
+	    line-height: 34px;
+	    text-align: center;
+	}
+
+	a.view_all_margin{
+		margin-left: -34px !important;
+	} 
+
+	.width-70 {
+		width:95% ; 
+		margin: auto;
+	}
+
+	.owl-item{
+		width: 150px !important;
+	}
+
+	.footer-top-big-padding{
+		padding-left: 0px !important;
+	}
+
+	.margin-left-480{
+		margin-left: 13px !important;
+	}
+
+	.owl-stage-outer{
+		min-height: 72px !important;
+	}
+
+	.parners_section{
+		min-height: 175px;
+	}
+
+	.featured_jobs_container{
+		padding: 0px 20px !important;
+	}
+
+	.featured-news{
+		padding: 0px 20px !important;
+	}
+
+	.featured-news .featured-news-container{
+		padding: 0px 20px !important;
+	}
+
+	.featured-news .thumbnail {
+	    height: 185px !important;
+	    margin-bottom: 0px !important;
+	}
+
+	.featured-jobs .thumbnail .feature-link h3 {
+	    padding-left: 10px;
+	    margin: 0 0 6px;
+	    font-size: 18px;
+	    line-height: 24px;
+	}
+
+	.header-circle {
+		right: 1px !important;
+	    bottom: 1px !important;
+	}
+
+	.our_capacity_run .counter-div{
+		margin-top: 34px;
+	}
+
+	.our_capacity_run .count_capacity_p {
+	    width: 100% !important;
+	    min-height: 150px !important;
+	}
+
+	.ui-menu__bar{
+		background-color: #000000 !important;
+	}
+
+	.mobile-menu-bar{
+		background-color: #ffffff !important;
+	}
+
+	.menu-inner-wrapper .svg-animation{
+		top: 27% !important;
+    	left: 13% !important;
+	}
+
+	.menu-inner-wrapper .svg-animation image{
+		width: 272px !important;
+		height: 100px;
+	}
+
+	.promo {
+	    height: 254px !important;
+	}
+
+	.promo video{
+		height: 437px !important;
+		position: absolute !important;
+		top: -68px !important;
+	}
+
+	.promo_tour_con_h1 h1{
+		font-size: 16px !important;
+	}
+
+	.single_job img{
+		width: 100% !important;
+	}
+}
+
+@media screen and (max-width: 767px){
+	.margin_left_0{
+		margin-left: 0px !important;
+	}
+
+	.promo{
+		height: 65vh;
+	}
+
+	.promo__content {
+		transform: none !important;
+	    width: 100% !important;
+	}
+
+	.header-circle {
+		right: 60px;
+	    bottom: 60px;
+	}
+
+	.icon_img {
+	    width: 100px;
+	    margin: 10px auto;
+	}
+
+	.counter-title {
+	    font-size: 36px;
+	    color: rgb(0, 0, 0);
+	    line-height: 34px;
+	}
+
+	.counter-title.p {
+	    font-size: 24px !important;
+	}
+
+	.side-bg-content-container {
+	    padding-bottom: 3rem;
+	}
+
+	.our_capacity_run .col-lg-2, 
+	.our_capacity_run .col-md-2, 
+	.our_capacity_run .col-sm-2, 
+	.our_capacity_run .col-sm-7, 
+	.our_capacity_run .col-xs-12{
+		padding-left: 0px !important;
+	} 
+
+	.home-news .col-md-8, 
+	.home-news .col-sm-12,  
+	.home-news .col-xs-12{
+		padding-left: 10px !important;
+	} 
+
+	.side-content{
+		margin-left: 0px !important;
+	}
+
+	.side-content .col-md-7{
+		padding-left: 0px !important;
+	}
+
+	.contact_map_area{
+		display: flex;
+  		flex-direction: column;
+	}
+
+	.contact_map_area #second_order_swap{
+		order: 2;
+	}
+	.contact_map_area #first_order_swap{
+		order: 1;
+		padding-bottom: 4rem;
+	}
+
+	.contact_map_area address {
+	    padding-top: 3rem !important;
+	    padding-bottom: 3rem !important;
+	    text-align: left !important;
+	}
+	.contact_map_area .social_icon{
+	    text-align: left;
+	    padding-bottom: 2rem;
+	}
+
+	.conact_page_form{
+		padding: 2rem 0px 3rem 1rem !important;
+	}
+
+	.join_us_we_love_our_people {
+	    padding-bottom: 4rem;
+	}
+
+	.join_us_we_love_our_people p{
+		padding: 20px 50px 20px 50px;
+	}
+
+	.join_us_global_movement {
+	    padding: 35px 65px 34px 65px;
+	}
+
+	.overflow_hide_100{
+		width: 100%;
+		overflow: hidden;
+	}
+
+	.img-responsive{
+		width: 100% !important;
+	}
+
+	.sustainable_stratgy_1{
+		padding: 50px 30px;
+	}
+
+	.swiper-container-fade .swiper-slide{
+		width: 100% !important;
+	}
+
+	.width-90{
+		width: 100% !important;
+	}
+	.width-40{
+		width: 100% !important;
+	}
+
+	.padding-100px-all {
+	    padding: 40px !important;
+	}
+}
+
+@media screen and (max-width: 600px) {
+
+    .take_tour_pic_category .gallery{
+    	text-align: center !important;
+    }
+
+    .carousel-control-prev {
+	    left: 0px;
+	    z-index: 9999;
+	    height: 30px;
+	    top: 50%;
+	    justify-content: center;
+	    width: 4.7%;
+	    color: #000;
+	}
+
+	.carousel-control-next {
+	    right: -7px;
+	    z-index: 9999;
+	    height: 30px;
+	    top: 50%;
+	    justify-content: left;
+	    width: 2.5%;
+	    width: 5.5%;
+	    color: #000;
+	}
+}
+
+@media screen and (min-width: 1450px){
+	.take_a_tour_absolute{
+		position: absolute;
+		right: 0px;
+	}
+}

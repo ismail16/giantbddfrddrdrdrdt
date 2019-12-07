@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- Stylesheets -->
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700,400italic,300italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="docs.theme.min.css">
+    <link rel="stylesheet" href="owl.carousel.min.css">
+    <link rel="stylesheet" href="owl.theme.default.min.css">
+    <script src="jquery.min.js"></script>
+    <script src="owl.carousel.js"></script>
+  </head>
+  <body>
+
+    <!--  Demos -->
+    <section id="demos">
+      <div class="row">
+        <div class="large-12 columns">
+          <div class="owl-carousel owl-theme">
+            <div class="item">
+              <h4>1</h4>
+            </div>
+            <div class="item">
+              <h4>2</h4>
+            </div>
+            <div class="item">
+              <h4>3</h4>
+            </div>
+            <div class="item">
+              <h4>4</h4>
+            </div>
+            <div class="item">
+              <h4>5</h4>
+            </div>
+            <div class="item">
+              <h4>6</h4>
+            </div>
+            <div class="item">
+              <h4>7</h4>
+            </div>
+            <div class="item">
+              <h4>8</h4>
+            </div>
+            <div class="item">
+              <h4>9</h4>
+            </div>
+            <div class="item">
+              <h4>10</h4>
+            </div>
+            <div class="item">
+              <h4>11</h4>
+            </div>
+            <div class="item">
+              <h4>12</h4>
+            </div>
+          </div>
+          <a class="button secondary play">Play</a> 
+          <a class="button secondary stop">Stop</a> 
+
+          <script>
+            $(document).ready(function() {
+              var owl = $('.owl-carousel');
+              owl.owlCarousel({
+                items: 6,
+                loop: true,
+				        rtl:true,
+                margin: 10,
+                autoplay: true,
+                autoplayTimeout: 1500,
+                autoplayHoverPause: true
+              });
+              $('.play').on('click', function() {
+                owl.trigger('play.owl.autoplay', [1500])
+              })
+              $('.stop').on('click', function() {
+                owl.trigger('stop.owl.autoplay')
+              })
+            })
+          </script>
+        </div>
+      </div>
+    </section>
+
+    <!-- vendors -->
+    <script src="highlight.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

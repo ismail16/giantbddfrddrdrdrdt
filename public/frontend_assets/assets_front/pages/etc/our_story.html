@@ -1,0 +1,409 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <script src="./triangle.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-param" content="_csrf-frontend">
+    <meta name="csrf-token" content="eW12OWFsTWQBLkYPVB1gHk4iBQECWyhUFhhPCDsfeAILVTRYIF0uHQ==">
+    <meta name="msapplication-config" content="./themes/real_estate/assets/images/static/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    
+    <title>Dynamic Site</title>
+    <link rel="stylesheet" id="MyStyle-css" href="./themes/real_estate/assets/css/news_bootstrap.min.css" type="text/css" media="all">
+    <link rel="stylesheet" id="MyStyle1-css" href="./themes/real_estate/assets/css/news_style.css" type="text/css" media="all">
+    <link rel="stylesheet" id="MyStyle2-css" href="./themes/real_estate/assets/css/font.css" type="text/css" media="all">
+    <link rel="apple-touch-icon" sizes="60x60" href="./themes/real_estate/assets/images/static/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./themes/real_estate/assets/images/static/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./themes/real_estate/assets/images/static/favicon-16x16.png">
+    <link rel="manifest" href="./themes/real_estate/assets/images/static/manifest.json">
+    <link rel="mask-icon" href="./themes/real_estate/assets/images/static/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="./themes/real_estate/assets/images/static/favicon.ico">
+    <link href="./themes/real_estate/assets/css/home.bundle.min.css" rel="stylesheet" media="all">
+    <link href="./themes/real_estate/assets/css/style.min.css" rel="stylesheet" media="all">
+    <link href="./themes/real_estate/assets/css/circle.css" rel="stylesheet" media="all">
+    <script src="./themes/real_estate/assets/js/jquery_modernizr.bundle.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDcFWRXxx-r-FKDO587EmqLQw6kq2pTXCE"></script>
+    <style>
+        /* The Overlay (background) */
+
+        #video-player-overlay {
+            /* Height & width depends on how you want to reveal the overlay (see JS below) */
+            height: 100%;
+            width: 100%;
+            position: fixed;
+            display: none;
+            /* Stay in place */
+            /* Sit on top */
+            left: 0;
+            top: 0;
+            background-color: rgb(0, 0, 0);
+            /* Black fallback color */
+            background-color: rgba(0, 0, 0, 0.9);
+            /* Black w/opacity */
+            overflow-x: hidden;
+            /* Disable horizontal scroll */
+            transition: 0.5s;
+            z-index: 9999;
+            /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+        }
+
+        /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+
+        @media screen and (max-height: 450px) {
+            #video-player-overlay a {
+                font-size: 20px
+            }
+            #video-player-overlay .closebtn {
+                font-size: 40px;
+                top: 15px;
+                right: 35px;
+            }
+        }
+    </style>
+</head>
+<body>
+	<script type="text/javascript">
+	   var site_url_info = {
+	       baseUrl: 'http://innstarbd.com',
+	       themeUrl: 'http://innstarbd.com/themes/real_estate'
+	   }               
+	</script>
+	
+	<div class="site-main-wrapper">
+	    <div class="loader ">
+	        <div class="custom-progress"></div>
+	        <div class="loader-logo">
+	            <h2 class="heading-secondary">
+	                <span>
+	                    <span>Giant woke up.</span>
+	                </span>
+	            </h2>
+	        </div>
+	    </div>
+	    <header class="">
+	        <!-- Page -->
+	        <div class="page page_loading" id="root">
+	            <!-- UI -->
+	            <div class="mobile-menu-bar"></div>
+	            <a class="ui-logo " href="index.html"></a>
+	            <span class="ui-menu">
+	                <!--<img src="images/static/icons/hamburger-normal.png" alt="">-->
+	                <span class="ui-menu__bar"></span>
+	                <span class="ui-menu__bar"></span>
+	                <span class="ui-menu__bar"></span>
+	            </span>
+
+	            <nav class="menu">
+
+	                <i class="menu__close">
+	                    <img src="themes/real_estate/assets/images/static/icons/hamburger-close.png" alt="">
+	                </i>
+	                <div class="menu-inner-wrapper">
+	                    <span class="menu-svg-animation-holder">
+                            <svg id="home-giant" version="1.1" class="svg-animation" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <image x="0" y="0" width="236" height="123" xlink:href="themes/real_estate/assets/images/static/icons/giant/home-giant.png"
+                                />
+                            </svg>
+
+                            <svg id="map-bangladesh-giant" version="1.1" class="svg-animation" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <image x="0" y="0" width="236" height="123" xlink:href="themes/real_estate/assets/images/static/icons/giant/map-bangladesh-giant.png"
+                                />
+                            </svg>
+
+
+                            <svg id="our-concerns" version="1.1" class="svg-animation" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <image x="0" y="0" width="236" height="123" xlink:href="themes/real_estate/assets/images/static/icons/giant/our-concerns.png"
+                                />
+                            </svg>
+
+                            <svg id="profile-giant-final" version="1.1" class="svg-animation" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <image x="0" y="0" width="236" height="123" xlink:href="themes/real_estate/assets/images/static/icons/giant/profile-giant-final.png"
+                                />
+                            </svg>
+
+                            <svg id="sustainability-icon" version="1.1" class="svg-animation" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <image x="0" y="0" width="236" height="123" xlink:href="themes/real_estate/assets/images/static/icons/giant/sustainability-icon.png"
+                                />
+                            </svg>
+
+                            <svg id="take-a-tour-giant" version="1.1" class="svg-animation" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <image x="0" y="0" width="236" height="123" xlink:href="themes/real_estate/assets/images/static/icons/giant/take-a-tour-giant.png"
+                                />
+                            </svg>
+                        </span>
+		                <menu class="menu__content">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <a data-target="home-giant" class="menu__item active main-menu-item" href="index.html">Home</a>
+                                    <a data-target="profile-giant-final" class="menu__item main-menu-item" href="#">Profile</a>
+                                    <a data-target="sustainability-icon" class="menu__item main-menu-item" href="#">Sustainability Strategy</a>
+                                    <a data-target="take-a-tour-giant" class="menu__item main-menu-item" href="#">Take a tour</a>
+                                    <a data-target="our-concerns" class="menu__item main-menu-item" href="#">Our Concerns</a>
+                                    <a data-target="map-bangladesh-giant" class="menu__item main-menu-item" href="#">Our pride Bangladesh</a>
+                                </div>
+                                <div class="col-md-6" id="sub-menu">
+                                </div>
+                            </div>
+                        </menu>
+	            	</div>
+	        	</nav>
+	    	</div>
+		</header>
+
+		<!--<img src="-->
+		<div class="hero-banner-no-slider" style="background-image: url('admin/uploads/page/mission1/1506143169xAfPG.jpg');">
+		    <div class="ui-help">
+		        <img src="themes/real_estate/assets/images/static/icons/arrow-right-large-pink.png" alt="" class="ui-down-arrow">
+		    </div>
+		</div>
+
+		<!--start changing section -->
+        <section id="background" class=" our-background">
+            <div class="clearfix">
+                <div class="col-sm-5 col-md-5 no-pad full_width_img">
+                    <img src="themes/real_estate/assets/images/static/story.jpg">
+                </div>
+                <div class="col-sm-7 col-md-7 no-pad">
+                    <div class="content-holder no-before-after bg-white section-gap" style="padding-bottom: 0px;">
+                        <h2 class="heading-primary style-1"> Background </h2>
+                        <p>Shanta started its journey in 1988 in the ready-made garment (RMG) sector and became one of the forerunners in RMG export by establishing leading industries such as Shanta Garments Ltd, Shanta Industries Ltd, Shanta Washworks Ltd, GDS Chemicals Ltd and Shanta Denims Ltd. Earning a solid reputation as an important vendor for some of the most renowned apparel brands of USA and Europe.
+                            <br>
+                            <br>
+                        Shanta is also a key founding member and majority stakeholder of the STS Group - the promoter of the world class Apollo Hospitals Dhaka, International School Dhaka (ISD) and the Delhi Public Schools, Dhaka. Moreover, Shanta Securities Ltd - a brokerage house, was established in 2015 with the aim of setting higher standards in equities trading.&nbsp;<br>
+                        <br>
+                        Shanta has a long track record of construction since 1991, having been involved in various projects of its own and of the STS Group. It has built the iconic Safura Tower- the 16 storied commercial landmark at Banani, the 200,000 sft multi-facility centrally air conditioned International School Dhaka (ISD) at Bashundhara, the 125,000 sft Delhi Public School at Uttara, state-of-the-art RMG factories such as its 150,000 sft Shanta Industries Ltd, the 150,000 sft Shanta Denims Ltd and the 35,000 sft Shanta Washworks Ltd at Dhaka EPZ. Furthermore, the team was also involved in the construction of Apollo Hospitals Dhaka - the 550,000 sft first multi-disciplinary super-specialty hospital of the country.<br>
+                        <br>
+                        Eventually exiting the RMG sector and dissolving it's interests to pursue the passion for construction, Shanta Holdings Limited (SHL) was established in 2005 with a mission to change the lifestyle of city dwellers by providing modern, functional and aesthetic living and working spaces that can only be compared to the most successful developers of the globe.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="who-we-are" class="who-we-are-section section-gap bg-grey pb-40">
+            <div class="container">
+                <div class="mb-40">
+                    <div class="giant_page_header">
+                        <h2 class="heading-primary text-white"> Who we are </h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-5 col-md-5">
+                        <div class="image-box-holder">
+                            <div class="image-box ">
+                                <div class="inner-content text-white">
+                                     <img src="themes/real_estate/assets/images/static/we_are.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-7 col-md-7  image-box-side-content no-margin">
+                        <div class="mt-20 content-holder">
+                            <p>A powerful portfolio of the country’s most distinctive and selective developments, with an excellent reputation in the Real Estate market, and enviable relationships that give our clients exclusive access to the ultimate in luxury apartments and exquisite commercial spaces, all in prime locations of Dhaka city.<br>
+                            &nbsp;<br>
+                            Our promise remains to develop a portfolio of luxury spaces and offer investors as well as buyers an unparalleled quality of service, inimitable by competitors. &nbsp;It is the commitment to both impeccably high standards and attention to detail that drive us to our success.<br>
+                            <br>
+                            Besides building beyond expectation, SHL moreover sets standards for itself, for you and for others, which is why we proudly declare our driving philosophy to be "Setting Standards".</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="our-approach" class="section-gap paraxify bg-cover-center text-white has-overlay-layer" style="background-image: url(http://www.shantaholdings.com/admin/uploads/page/our-approach/1489039012hrdhS.jpg);">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2  ">
+                        <h2 class="heading-primary mb-20">
+                            Our Approach                </h2>
+                        <p>Acquiring an apartment, a home or even an office space is a person's life-long dream. This dream drives him or her to accumulate the required finance slowly and gradually, which is the start of shaping this dream into reality. This relentless pursuit of realizing such a dream can flow from generation to generation. But finally when a space is purchased, has anyone thought to what extent this “dream” is actually fulfilled?<br>
+                        <br>
+                        We know that moment is an important stepping-stone for you, and hence we at Shanta Holdings have been preparing for just that. Our apartments, condominiums and commercial complexes compete with the best that the modern world has to offer. From temperature-controlled swimming pools to lush rooftop gardens and terraces, from state-of-the-art gymnasiums to spacious walkways and children’s play facilities, you’ll find the solution to your need for stylish urban living with us at Shanta.<br>
+                        <br>
+                        Even business becomes pleasure in our exquisite commercial spaces with central air-conditioning, triple height lobby areas, multilayered parking facilities, and much more. Show the world you’ve arrived, by owning your own little piece of luxury.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="our-logo" class="who-we-are-section section-gap bg-light-white pb-40">
+            <div class="container">
+                <div class="mb-40">
+                    <h2 class="heading-primary text-black">Our Logo </h2>
+                </div>
+                <div class="row">
+                    <div class="col-sm-5 col-md-5 col-sm-46-percent">
+                        <div class="image-box-holder">
+                            <div class="image-box " style="background-image: url(themes/real_estate/assets/images/static/who_logo.jpg);">
+                                    <div class="inner-content text-white">
+                                    <p></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-6  col-sm-54-percent image-box-side-content no-pad no-margin">
+                        <div class="mt-20 content-holder">
+                            The concept for our logo is derived from the shape of human hands, the shape they make when held with the palms facing each other.<br>
+                            <br>
+                            Usually, when we hold an object in our palms, it is something we care about, something valuable to us. Like when a blow of air attempts to put off a candle that gives us light, we protect it with our palms. When a tiny bird falls from its nest, we hold it up and protect it in our palms. When a sculptor sculpts a masterpiece, he shapes it using his fingers and palms. Hence, our logo depicts the amount of care and emotion we put into each and every creation.<br>
+                            <br>
+                            Moreover, it is a symbol that inspires us on a daily basis to be caring towards our clients and protect their interests by providing an uncompromising level of service and superior products.                                                                  
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+		<!--start changing section -->
+
+		<footer class="site-main-footer bg-color-3">
+		    <div class="container">
+		        <div class="row footer-top-big-padding">
+		            <div class="child-stagger-up" data-scrollmagic data-from="30px">
+		                <div class="row mb-80 text-center">
+		                    <ul class="social-list list-inline">
+		                        <li>
+		                            <a href="#" target="_blank">Find Us</a>
+		                        </li>
+		                        <li>
+		                            <a href="#" target="_blank">Join Us</a>
+		                        </li>
+		                        <li>
+		                            <a href="#" target="_blank">The Newsline</a>
+		                        </li>
+		                        <!-- <li>
+		                        <a href="#" target="_blank">Connect/Reach out</a>
+		                    </li> -->
+		                        <li>
+		                            <a href="#" target="_blank">Newsletter</a>
+		                        </li>
+		                    </ul>
+		                </div>
+		            </div>
+		        </div>
+		    </div>
+		</footer>
+	</div>
+
+	<script src="./themes/real_estate/assets/js/home.bundle.js"></script>
+        <script src="./themes/real_estate/assets/js/script.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                  $(".video_div_area").hover(function () {
+                      $(this).children("video")[0].play();
+                  }, function () {
+                      var el = $(this).children("video")[0];
+                      el.pause();
+                      el.currentTime = 0;
+                  });
+            });
+        </script>
+        <script type="text/javascript">
+            jQuery(document).ready(function () {
+                $(".main-menu-item").hover(function () {
+                    var menu = {
+                        "home": [
+                          {name: "", link: ''}
+                        ],
+                        "profile": [
+                          {name: 'Our Leaders', link: 'our_leaders.html'},
+                          {name: 'Our Story (Circtificates)', link: 'our_story.html'},
+                          {name: 'Our Belief', link: 'our_belief.html'},
+                          {name: 'Our Capacity', link: 'our_capacity.html'},
+                          {name: 'Our Success Story', link: 'our_success_story.html'}
+                        ],
+                        "sustainability_strategy": [
+                          {name: 'Giving back to the society/people', link: 'bact_to_society.html'},
+                          {name: 'Caring for the environment', link: 'environment.html'}
+                        ],
+                        "take_a_tour": [
+                          {name: 'Giant Textile Unit', link: 'textile_unit.html'},
+                          {name: 'Joydebpur Unit', link: 'joydebpur_unit.html'},
+                          {name: 'Research and Development', link: 'research_dev.html'},
+                          {name: 'Products/Creations', link: 'products.html'},
+                          {name: 'Partners', link: 'partners.html'}
+                        ],
+                        "our_concerns": [
+                          {name: 'GBT', link: 'gbt.html'},
+                          {name: 'Giant Agro', link: 'giant_agro.html'}
+                        ],
+                        "our_pride_bangladesh": [
+                          {name: "", link: ''}
+                        ],
+                    }
+                    var item_selected = $(this).html().replace(/\s+/g, '_').toLowerCase();
+                    var sub_menu_items = eval("menu." + item_selected);
+                    var text = "";
+                    for (i = 0; i < sub_menu_items.length; i++) {
+                      text += '<a data-target="home" class="menu__item sub-menu-item" href="'+sub_menu_items[i].link+'">' + sub_menu_items[i].name +'</a>';
+                    }
+
+                    var margin_top = (parseInt(sub_menu_items[0]) * 42) + 'px';
+                    text = '<h1 style = "margin-top: ' + margin_top + ';"></h1>' + text;
+                    $("#sub-menu").html(text);
+                });
+
+                $(document).delegate('.dynamic_submit_btn', 'click', function (event, jqXHR, settings) {
+                    var form = $(this).closest('form');
+                    var form_id = form.attr('id');
+
+                    if (form.find('.has-error').length) {
+                        return false;
+                    }
+
+                    $.ajax({
+                        url: form.attr('action'),
+                        type: 'post',
+                        data: form.serialize(),
+                        beforeSend: function (request) {
+                            $('.success_wrapper_' + form_id).addClass('hide');
+                            $('.error_wrapper_' + form_id).addClass('hide');
+                        },
+
+                        success: function (data) {
+                            if (data.result == 'success') {
+                                form[0].reset();
+                                $('.success_wrapper_' + form_id).removeClass('hide');
+                                $('.error_wrapper_' + form_id).addClass('hide');
+                                $('.success_container_' + form_id).html(data.msg);
+                                $('.error_container_' + form_id).html('');
+
+                                // setTimeout(function() {
+
+                                //   $('.success_wrapper_'+form_id).addClass('hide');
+
+                                // }, 8000);
+
+                            } else {
+                                $('.error_container_' + form_id).html(data.msg);
+                                $('.success_container_' + form_id).html('');
+                                $('.success_wrapper_' + form_id).addClass('hide');
+                                $('.error_wrapper_' + form_id).removeClass('hide');
+                                // setTimeout(function() {
+
+                                //   $('.error_wrapper_'+form_id).addClass('hide');
+
+                                // }, 15000);
+                            }
+                        }
+                    });
+                    return false;
+                });
+            });
+        </script>
+
+        <script>
+            function openNav(element) {
+                document.getElementById("circle-video-frame").src = element.getAttribute('data-video-src');
+                document.getElementById("video-player-overlay").style.display = "block";
+            }
+
+            function closeNav() {
+                document.getElementById("video-player-overlay").style.display = "none";
+                document.getElementById("circle-video-frame").src = "";
+
+            }
+        </script>
+</body>
+</html>

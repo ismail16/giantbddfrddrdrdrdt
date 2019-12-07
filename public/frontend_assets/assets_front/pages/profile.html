@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <head>
+        <script src="js/triangle.js"></script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="csrf-param" content="_csrf-frontend">
+        <meta name="csrf-token" content="eW12OWFsTWQBLkYPVB1gHk4iBQECWyhUFhhPCDsfeAILVTRYIF0uHQ==">
+        <meta name="msapplication-config" content="images/static/browserconfig.xml">
+        <meta name="theme-color" content="#ffffff">
+        
+        <title>Dynamic Site</title>
+        <link rel="stylesheet" id="MyStyle-css" href="css/news_bootstrap.min.css" type="text/css" media="all">
+        <link rel="stylesheet" id="MyStyle1-css" href="css/news_style.css" type="text/css" media="all">
+        <link rel="stylesheet" id="MyStyle2-css" href="css/font.css" type="text/css" media="all">
+        <link rel="stylesheet" media="all" href="css/style.min.css">
+        <link rel="stylesheet" media="all" href="css/home.bundle.min.css">
+        <link rel="stylesheet" media="all" href="css/circle.css" >
+        <link rel="stylesheet" media="all" href="css/style.css" >
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <link rel="apple-touch-icon" sizes="60x60" href="imagesapple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="imagesfavicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+        <link rel="mask-icon" href="images/safari-pinned-tab.svg" color="#5bbad5">
+        <link rel="shortcut icon" href="images/favicon.ico">
+        
+        <link rel="manifest" href="images/manifest.json">
+        <script src="js/jquery_modernizr.bundle.min.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDcFWRXxx-r-FKDO587EmqLQw6kq2pTXCE"></script>
+    </head>
+
+    <body class="home-page">
+        <script type="text/javascript">
+            var site_url_info = {
+                baseUrl: 'http://test.com',
+                themeUrl: 'http://test.com/themes/real_estate'
+            }
+        </script>
+
+        <div class="site-main-wrapper">
+            <div class="loader ">
+                <div class="custom-progress"></div>
+                <div class="loader-logo">
+                    <h2 class="heading-secondary">
+                        <span>
+                            <img src="http://openembroidery.com/wp-content/uploads/2016/09/machine_a_coudre_low.gif" height="100%" width="100%">
+                        </span>
+                    </h2>
+                </div>
+            </div>
+
+            <header>
+                <div class="page page_loading" id="root">
+                    <div class="mobile-menu-bar"></div>
+                    <a class="ui-logo " href="#">
+                        <img src="images/logo.png">
+                    </a>
+
+                    <span class="ui-menu">
+                        <span class="ui-menu__bar"></span>
+                        <span class="ui-menu__bar"></span>
+                        <span class="ui-menu__bar"></span>
+                    </span>
+
+                    <nav class="menu">
+                        <i class="menu__close">
+                            <img src="icons/hamburger-close.png" alt="">
+                        </i>
+                        <div class="menu-inner-wrapper">
+                            <span class="menu-svg-animation-holder">
+                                <svg id="home-giant" version="1.1" class="svg-animation" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <image x="0" y="0" width="236" height="123" xlink:href="icons/giant/home-giant.png"
+                                    />
+                                </svg>
+
+                                <svg id="map-bangladesh-giant" version="1.1" class="svg-animation" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <image x="0" y="0" width="236" height="123" xlink:href="icons/giant/map-bangladesh-giant.png"
+                                    />
+                                </svg>
+
+
+                                <svg id="our-concerns" version="1.1" class="svg-animation" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <image x="0" y="0" width="236" height="123" xlink:href="icons/giant/our-concerns.png"
+                                    />
+                                </svg>
+
+                                <svg id="profile-giant-final" version="1.1" class="svg-animation" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <image x="0" y="0" width="236" height="123" xlink:href="icons/giant/profile-giant-final.png"
+                                    />
+                                </svg>
+
+                                <svg id="sustainability-icon" version="1.1" class="svg-animation" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <image x="0" y="0" width="236" height="123" xlink:href="icons/giant/sustainability-icon.png"
+                                    />
+                                </svg>
+
+                                <svg id="take-a-tour-giant" version="1.1" class="svg-animation" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <image x="0" y="0" width="236" height="123" xlink:href="icons/giant/take-a-tour-giant.png"
+                                    />
+                                </svg>
+                            </span>
+                            <menu class="menu__content">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        
+                                    </div>
+                                    <div class="col-md-3">
+                                        <a data-target="home-giant" class="menu__item active main-menu-item" href="index.html">Home</a>
+                                        <a data-target="profile-giant-final" class="menu__item main-menu-item" href="pages/profile.html">Profile</a>
+                                        <a data-target="sustainability-icon" class="menu__item main-menu-item" href="#">Sustainability Strategy</a>
+                                        <a data-target="take-a-tour-giant" class="menu__item main-menu-item" href="#">Take a tour</a>
+                                        <a data-target="our-concerns" class="menu__item main-menu-item" href="#">Our Concerns</a>
+                                        <a data-target="map-bangladesh-giant" class="menu__item main-menu-item" href="#">Our pride Bangladesh</a>
+                                    </div>
+
+                                    <div class="col-md-6" id="sub-menu">
+
+                                    </div>
+                                </div>
+                            </menu>
+                        </div>
+                    </nav>
+                    <noindex>
+                        <div class="rotate">
+                            <i class="rotate__logo"></i>
+                            <i class="rotate__icon"></i>
+                            <div class="rotate__text">Please rotate your&nbsp;device for&nbsp;better experience</div>
+                        </div>
+                    </noindex>
+
+                    <section class="promo">
+                        <div class="promo__content">
+                            <img style="width: 100%; height: inherit;" src="images/Giant-Textile-Building.jpg">
+
+                        </div>
+                    </section>
+
+                    </div>
+            </header>
+
+            <section class="container">
+                <div class="row">
+                    <div class="col-md-11" style="margin-left: 45px;">
+                        <div class="col-lg-12">
+                            <h3>Our Leaders</h3>
+                            <div class="row pt-md">
+                                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 profile">
+                                    <div class="img-box">
+                                        <img src="http://nabeel.co.in/files/bootsnipp/team/4.jpg" class="img-responsive">
+                                        <ul class="text-center">
+                                            <a href="#"><li><i class="fa fa-facebook"></i></li></a>
+                                            <a href="#"><li><i class="fa fa-twitter"></i></li></a>
+                                            <a href="#"><li><i class="fa fa-linkedin"></i></li></a>
+                                        </ul>
+                                    </div>
+                                    <h1>John Doe</h1>
+                                    <h2>Designer</h2>
+                                    <button data-toggle="modal" data-target="#profile_detail1" class="btn-primary btn-block">Detailes</button>
+                                </div>
+                                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 profile">
+                                    <div class="img-box">
+                                        <img src="http://nabeel.co.in/files/bootsnipp/team/1.jpg" class="img-responsive">
+                                        <ul class="text-center">
+                                            <a href="#"><li><i class="fa fa-facebook"></i></li></a>
+                                            <a href="#"><li><i class="fa fa-twitter"></i></li></a>
+                                            <a href="#"><li><i class="fa fa-linkedin"></i></li></a>
+                                        </ul>
+                                    </div>
+                                    <h1>Marrie Doi</h1>
+                                    <h2>Co-founder/ Operations</h2>
+                                   <button data-toggle="modal" data-target="#profile_detail2" class="btn-primary btn-block">Detailes</button>
+                                </div>
+                                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 profile">
+                                    <div class="img-box">
+                                        <img src="http://nabeel.co.in/files/bootsnipp/team/2.jpg" class="img-responsive">
+                                        <ul class="text-center">
+                                            <a href="#"><li><i class="fa fa-facebook"></i></li></a>
+                                            <a href="#"><li><i class="fa fa-twitter"></i></li></a>
+                                            <a href="#"><li><i class="fa fa-linkedin"></i></li></a>
+                                        </ul>
+                                    </div>
+                                    <h1>Christopher Di</h1>
+                                    <h2>Co-founder/ Projects</h2>
+                                    <button data-toggle="modal" data-target="#profile_detail3" class="btn-primary btn-block">Detailes</button>
+                                </div>
+                                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 profile">
+                                    <div class="img-box">
+                                        <img src="http://nabeel.co.in/files/bootsnipp/team/3.jpg" class="img-responsive">
+                                        <ul class="text-center">
+                                            <a href="#"><li><i class="fa fa-facebook"></i></li></a>
+                                            <a href="#"><li><i class="fa fa-twitter"></i></li></a>
+                                            <a href="#"><li><i class="fa fa-linkedin"></i></li></a>
+                                        </ul>
+                                    </div>
+                                    <h1>Heather H</h1>
+                                    <h2>Co-founder/ Marketing</h2>
+                                    <button data-toggle="modal" data-target="#profile_detail4" class="btn-primary btn-block">Detailes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <div class="container">
+                <div class="modal fade" id="profile_detail1" role="dialog">
+                    <div class="modal-dialog modal-md">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">Profile</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-md-6 product_img">
+                                        <img src="http://nabeel.co.in/files/bootsnipp/team/4.jpg" class="img-responsive">
+                                    </div>
+                                    <div class="col-md-6 product_content">
+                                        <h4>Hello</h4>
+                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                       
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="modal fade" id="profile_detail2" role="dialog">
+                    <div class="modal-dialog modal-md">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">Profile</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-md-6 product_img">
+                                        <img src="http://nabeel.co.in/files/bootsnipp/team/1.jpg" class="img-responsive">
+                                    </div>
+                                    <div class="col-md-6 product_content">
+                                        <h4>Hello</h4>
+                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                       
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="modal fade" id="profile_detail3" role="dialog">
+                    <div class="modal-dialog modal-md">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">Profile</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-md-6 product_img">
+                                       <img src="http://nabeel.co.in/files/bootsnipp/team/2.jpg" class="img-responsive">
+                                    </div>
+                                    <div class="col-md-6 product_content">
+                                        <h4>Hello</h4>
+                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                       
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="modal fade" id="profile_detail4" role="dialog">
+                    <div class="modal-dialog modal-md">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">Profile</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-md-6 product_img">
+                                        <img src="http://nabeel.co.in/files/bootsnipp/team/3.jpg" class="img-responsive">
+                                    </div>
+                                    <div class="col-md-6 product_content">
+                                        <h4>Hello</h4>
+                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                       
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <section class="container">
+                <div class="row">
+                    <div class="col-md-11" style="margin-left: 45px;">
+                        <div class="col-lg-12">
+                            <h3>Our Belief</h3>
+                            <p>We don’t believe in words, we believe in work. People make promise with no intention to keep. But our intention is crystal clear. We don’t make promises, we take actions. We don’t say, we do. <br>
+                            Our mission is not to survive but to thrive. <br>
+                            Our vision is to make the world a better place by caring about its people. </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="container">
+                <div class="row">
+                    <div class="col-md-11" style="margin-left: 45px;">
+                        <div class="col-lg-12">
+                            <h3>Our Capacity</h3>
+                            <h4>Our Capacity (Animated count)</h4>
+                            <p>Printing capacity <span class="price"></span>a day</p><br>
+                            <p>Embroidery capacity <span class="embroidery"></span>a day</p><br>
+                            <p>Fabric capacity <span class="fabric"></span>kg a day</p><br>
+                            <p>Garment capacity <span class="garment"></span>a day</p><br>
+                            <p>Yearly turnover $ <span class="yearly"></span>million</p><br>
+                            <p>Area capacity</p><br>
+
+                            <h4>An image of the factory map showing the following infos</h4>
+                            <p>Total area <span class="total"></span> SFT </p><br>
+                            <p>Floor area <span class="floor"></span> SFT </p><br>
+                            <p>Production Area <span class="production"></span>  SFT </p><br>
+                            <p>Warehouse  <span class="warehouse"></span> SFT </p><br>
+                            <p>Utility <span class="utility"></span> SFT </p><br>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section style="background-color: white">
+                <br>
+                <h2 class="text-center">Our Certification </h2>
+                <div>
+                    <iframe width="100%" scrolling="no" frameborder="0" src="slider/index.html"></iframe>
+                </div>
+            </section>
+
+
+
+        <footer class="site-main-footer bg-color-3">
+            <div class="container">
+                <div class="row footer-top-big-padding">
+                    <div class="child-stagger-up" data-scrollmagic data-from="30px">
+                        <div class="row mb-30 text-center">
+                            <ul class="social-list list-inline">
+                                <li>
+                                    <a href="#" target="_blank">Find Us</a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank">Join Us</a>
+                                </li>
+                            </ul>
+                             <a href="#" target="_blank">Copyright © Techo pule. All Rights Reserved</a>
+                        </div>
+
+                    </div>
+
+                </div>
+                
+            </div>
+        </footer>
+
+
+
+        <script type="text/javascript">
+           (function($) {
+                $.fn.countTo = function(options) {
+                    // merge the default plugin settings with the custom options
+                    options = $.extend({}, $.fn.countTo.defaults, options || {});
+
+                    // how many times to update the value, and how much to increment the value on each update
+                    var loops = Math.ceil(options.speed / options.refreshInterval),
+                        increment = (options.to - options.from) / loops;
+
+                    return $(this).each(function() {
+                        var _this = this,
+                            loopCount = 0,
+                            value = options.from,
+                            interval = setInterval(updateTimer, options.refreshInterval);
+
+                        function updateTimer() {
+                            value += increment;
+                            loopCount++;
+                            $(_this).html(value.toFixed(options.decimals));
+
+                            if (typeof(options.onUpdate) == 'function') {
+                                options.onUpdate.call(_this, value);
+                            }
+
+                            if (loopCount >= loops) {
+                                clearInterval(interval);
+                                value = options.to;
+
+                                if (typeof(options.onComplete) == 'function') {
+                                    options.onComplete.call(_this, value);
+                                }
+                            }
+                        }
+                    });
+                };
+
+                $.fn.countTo.defaults = {
+                    from: 0,  // the number the element should start at
+                    to: 100,  // the number the element should end at
+                    speed: 1000,  // how long it should take to count between the target numbers
+                    refreshInterval: 100,  // how often the element should be updated
+                    decimals: 0,  // the number of decimal places to show
+                    onUpdate: null,  // callback method for every time the element is updated,
+                    onComplete: null,  // callback method for when the element finishes updating
+                };
+            })(jQuery);
+
+            jQuery(function($) {
+                $('.price').countTo({
+                    from: 50,
+                    to: 20000,
+                    speed: 5000,
+                    refreshInterval: 50,
+                    onComplete: function(value) {
+                        console.debug(this);
+                    }
+                });
+
+                $('.embroidery').countTo({
+                    from: 50,
+                    to: 10000,
+                    speed: 5000,
+                    refreshInterval: 50,
+                    onComplete: function(value) {
+                        console.debug(this);
+                    }
+                });
+
+                $('.fabric').countTo({
+                    from: 50,
+                    to: 20000,
+                    speed: 5000,
+                    refreshInterval: 50,
+                    onComplete: function(value) {
+                        console.debug(this);
+                    }
+                });
+
+                $('.garment').countTo({
+                    from: 20,
+                    to: 50000,
+                    speed: 5000,
+                    refreshInterval: 50,
+                    onComplete: function(value) {
+                        console.debug(this);
+                    }
+                });
+
+                 $('.yearly').countTo({
+                    from: 20,
+                    to: 35,
+                    speed: 5000,
+                    refreshInterval: 50,
+                    onComplete: function(value) {
+                        console.debug(this);
+                    }
+                });
+
+
+                 $('.yearly').countTo({
+                    from: 20,
+                    to: 35,
+                    speed: 5000,
+                    refreshInterval: 50,
+                    onComplete: function(value) {
+                        console.debug(this);
+                    }
+                });
+
+                $('.total').countTo({
+                    from: 20,
+                    to: 475200,
+                    speed: 5000,
+                    refreshInterval: 50,
+                    onComplete: function(value) {
+                        console.debug(this);
+                    }
+                });
+
+                $('.floor').countTo({
+                    from: 20,
+                    to: 205573,
+                    speed: 5000,
+                    refreshInterval: 50,
+                    onComplete: function(value) {
+                        console.debug(this);
+                    }
+                });
+
+                $('.production').countTo({
+                    from: 20,
+                    to: 104210,
+                    speed: 5000,
+                    refreshInterval: 50,
+                    onComplete: function(value) {
+                        console.debug(this);
+                    }
+                });
+
+                $('.warehouse').countTo({
+                    from: 20,
+                    to: 22636,
+                    speed: 5000,
+                    refreshInterval: 50,
+                    onComplete: function(value) {
+                        console.debug(this);
+                    }
+                });
+
+                $('.utility').countTo({
+                    from: 20,
+                    to: 17454,
+                    speed: 5000,
+                    refreshInterval: 50,
+                    onComplete: function(value) {
+                        console.debug(this);
+                    }
+                });
+            });
+        </script>
+
+        <script type="text/javascript" src="js/home.bundle.js"></script>
+        <script type="text/javascript" src="js/script.min.js"></script>
+        <script type="text/javascript" src="js/main_script.js"></script>
+
+    </body>
+</html>
